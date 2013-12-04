@@ -1,0 +1,30 @@
+<h1>Add New Event</>
+<h1>Editing <%= @event.name %></h1>
+
+<!-- This is a rails form helper -->
+<%= form_for(@event) do |f| %>
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :description %><br>
+		<%= f.text_area :description, cols:40, rows: 7 %>
+	</p>
+	<p>
+		<%= f.label :location %><br>
+		<%= f.text_field :location %>
+	</p>
+	<p>
+		<%= f.label :price %><br>
+		<%= f.number_field :price %>
+	</p>
+	<p>
+		<%= f.label :starts_at %><br>
+		<%= f.datetime_select :starts_at %>
+	</p>
+	<!-- This is a rails submit button helper -->
+	<p>
+	<%= f.submit %>
+	</p>
+<% end %>
