@@ -1,5 +1,8 @@
 <!-- This is a rails form helper -->
 <%= form_for(@event) do |f| %>
+	  <%= render "shared/errors" %>
+
+	<%= @event.errors.full_messages.to_sentence %>
 	<p>
 		<%= f.label :name %><br>
 		<%= f.text_field :name, autofocus: true %>
