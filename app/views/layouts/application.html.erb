@@ -7,17 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header style="color: #F0F0F0; background: #237CBE;">
-<h1>Coder Events</h1>
-</header><!-- /header -->
 
-<%= yield %>
+  <%= render 'layouts/header' %>
 
-<footer style="color: #237CBE; background: #F0F0F0">
-<p>
-	Copyright &copy; 2013 Dan Crews
-</p>	
-</footer>
+  <%= render 'layouts/sidebar' %>
+
+  <%= yield %>
+
+  <%= render 'layouts/footer' %>
 
 </body>
 </html>
